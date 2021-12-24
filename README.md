@@ -43,19 +43,7 @@ Lo que hace este Script es:
 * Instala Maven en el proyecto
 * Ejecuta el .war para que corra la aplicacion en el puerto 8080
 
-4. Installamos Maven en el proyecto
-
-`mvn install`
-
-5. Una vez installado se genera una nueva carpeta 'target' con el war que necesitamos ejecutar. Entramos a dicha carpeta
-
-`cd target/`
-
-6. Ejectuamos el .war
-
-`java -jar EnsolversInterview-0.0.1-1erosPasos.war`
-
-7. La aplicacion corre en el puerto numero 8080. La podemos abrir de nuestro navegador de preferencia.
+La aplicacion corre en el puerto numero 8080. La podemos abrir de nuestro navegador de preferencia.
 
 `http://localhost:8080/`
 
