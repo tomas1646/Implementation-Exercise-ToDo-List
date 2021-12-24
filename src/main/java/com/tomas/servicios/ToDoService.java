@@ -1,7 +1,6 @@
 package com.tomas.servicios;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 import com.tomas.entidades.Folder;
 import com.tomas.entidades.ToDo;
@@ -46,6 +45,24 @@ public class ToDoService {
     	Folder folder = folderRepository.findById(folderId).get();
     	
     	return (ArrayList<ToDo>) todoRespository.findByFolder(folder);
+    }
+    
+    public void changeIsCompleted(Long id, Integer isCompleted) {
+    	
+    	ToDo task = todoRespository.findById(id).get();
+    	
+    	task.setIsCompleted(isCompleted);
+    	
+    	todoRespository.save(task);
+    }
+    
+    public void changeName(Long id, String description) {
+    	
+    	ToDo task = todoRespository.findById(id).get();
+    	
+    	task.setDescription(description);
+    	
+    	todoRespository.save(task);
     }
 
 }

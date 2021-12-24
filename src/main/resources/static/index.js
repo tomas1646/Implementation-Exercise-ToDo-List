@@ -5,7 +5,6 @@ const vista_1 = document.getElementById("vista1-El");
 const vista_2 = document.getElementById("vista2-El");
 const vista_3 = document.getElementById("vista3-El");
 
-
 vista1();
 
 function vista1(){
@@ -56,8 +55,11 @@ function saveFolder(input){
         body: JSON.stringify(folder)
     }
 
+
     fetch(urlFOLDER, options);
     
+	alert(`Folder "${input.value}" created`);    
+	
     input.value = "";
     
     vista1();
@@ -79,11 +81,12 @@ function removeFolder(id){
 
     fetch(urlFOLDER + "/" +id, options);
     
+    alert(`Folder removed`);  
+    
     vista1();
 }
 
 function vista2(folderTitulo, folderId){
-	
 	vista_3.innerHTML = "";
     vista_2.innerHTML = `<h3 onclick='vista1()' class='cursor'>Folders > ${folderTitulo}</h3>`;
     let url = urlTODO + "/" + folderId;
@@ -91,10 +94,19 @@ function vista2(folderTitulo, folderId){
     .then(response => response.json())
     .then(data => {
 		data.forEach(todo =>{
-			vista_2.innerHTML += `
-            <div class="row">
+			
+			let checkbox;
+			
+			if(todo.isCompleted == 0){
+				checkbox =`<input type="checkbox" class="form-check-input" onclick="editTodoCheckbox(this, '${todo.id}')">`
+			}else{
+				checkbox =`<input type="checkbox" checked="checked" class="form-check-input" onclick="editTodoCheckbox(this, '${todo.id}')">`
+			}
+						
+			vista_2.innerHTML +=`
+			<div class="row">
                 <div class="col-1">
-                    <input type="checkbox" class="form-check-input">
+                	${checkbox}
                 </div>
                 <div class="col-9">
                     ${todo.description}
@@ -135,6 +147,8 @@ function saveTodo(input, folderId, folderTitulo){
 
     fetch(urlTODO, options);
     
+    alert(`New ToDo added to folder "${folderTitulo}"`);
+    
     input.value = "";
     
     vista2(folderTitulo,folderId);
@@ -154,24 +168,39 @@ function vista3(todoId, folderId, tituloToDo, folderTitulo){
 	`
 	
 }
+function editTodoCheckbox(checkbox, id){
+	
+	const options = {
+        method: "POST",
+        headers:{
+            'Content-Type':'application/json'
+        }
+    }
+	
+	let isCompleted;
+	
+	if(checkbox.checked){
+		isCompleted = 1;
+	}else{
+		isCompleted = 0;
+	}
+	
+	fetch(urlTODO + "/" + id + "/isComplete/" + isCompleted, options);
+}
+
 
 function editTodo(todoId, input, folderId, folderTitulo){
 	
-	const todo = {
-		todoId: todoId,
-        description: input.value,
-        isCompleted: 0,
-        folderId: folderId
-    }
     const options = {
         method: "POST",
         headers:{
             'Content-Type':'application/json'
-        },
-        body: JSON.stringify(todo)
+        }
     }
 
-    fetch(urlTODO, options);
+    fetch(urlTODO + "/" + todoId + "/description/" + input.value, options);
+    
+    alert(`Name changed to ${input.value}`);
     
     input.value = "";
     

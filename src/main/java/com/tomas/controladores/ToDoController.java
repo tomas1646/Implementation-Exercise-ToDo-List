@@ -1,7 +1,6 @@
 package com.tomas.controladores;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 import com.tomas.entidades.ToDo;
 import com.tomas.requestBody.ToDoRequest;
@@ -39,4 +38,15 @@ public class ToDoController {
         return taskService.saveToDo(request);
     }
 
+    @PostMapping(path = "/{id}/isComplete/{isCompleted}")
+    public void changeIsCompleted(@PathVariable("id")Long id, @PathVariable("isCompleted")Integer isCompleted){
+    	
+    	taskService.changeIsCompleted(id, isCompleted);
+    }
+    
+    @PostMapping(path = "/{id}/description/{description}")
+    public void changeName(@PathVariable("id")Long id, @PathVariable("description")String description){
+    	
+    	taskService.changeName(id, description);
+    }
 }
