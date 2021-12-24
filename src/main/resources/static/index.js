@@ -33,7 +33,7 @@ function vista1(){
         <div class="input-group">
 
             <input type="text" class="form-control" placeholder="New Folder" autocomplete="off" id="input1-el">
-            <button class="btn btn-secondary" onclick="saveFolder(document.getElementById('input1-el'))">Save</button>
+            <button class="btn btn-secondary" onclick="saveFolder(document.getElementById('input1-el'))">Add</button>
 
         </div>
         `
@@ -122,7 +122,7 @@ function vista2(folderTitulo, folderId){
         <div class="input-group">
 
             <input type="text" class="form-control" placeholder="New Task" autocomplete="off" id="input2-el">
-            <button class="btn btn-secondary" onclick="saveTodo(document.getElementById('input2-el'),'${folderId}','${folderTitulo}')">Save</button>
+            <button class="btn btn-secondary" onclick="saveTodo(document.getElementById('input2-el'),'${folderId}','${folderTitulo}')">Add</button>
 
         </div>
         `
