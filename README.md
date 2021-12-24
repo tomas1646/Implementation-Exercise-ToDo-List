@@ -21,9 +21,19 @@ Tener instalado MySQL, con:
 Asi no hay que hacer configuraciones adicionales.
 
 En caso de no tenerlo instalado se puede hacer con el siguente comando
+
 `sudo apt install mysql-server`
 
-Crear el usuario y la contraseña se puede encontrar facilmente en internet.
+Crear el usuario y la contraseña se puede encontrar facilmente en internet. Una forma puede ser la siguiente
+
+```
+sudo mysql
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+```
+
+referencia: https://stackoverflow.com/questions/41645309/mysql-error-access-denied-for-user-rootlocalhost
+
 
 ### Como abrirlo en Linux
 1. Desde la terminal nos vamos al directorio donde queremos clonar el repositorio.
