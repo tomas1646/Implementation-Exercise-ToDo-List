@@ -16,6 +16,7 @@ Instalar Maven, para poder instalarlo se hace con el siguiente comando.
 Tener instalado MySQL, con: 
 * usuario = root
 * contraseña = root 
+* Corriendo en el puerto 3306 (puerto por defecto)
 
 Asi no hay que hacer configuraciones adicionales.
 
