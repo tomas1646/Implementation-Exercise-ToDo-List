@@ -4,6 +4,17 @@
 * Creación de una lista To-Do.
 * Creación de carpetas (Folders) que agrupen los To-Do items.
 
+### Vistas
+
+##### Folder
+![Folder](https://github.com/tomas1646/Implementation-Exercise-ToDo-List/blob/master/img%20README/Folder.jpg "Folder")
+
+##### Lista To-Do
+![ToDo](https://github.com/tomas1646/Implementation-Exercise-ToDo-List/blob/master/img%20README/ToDo%20List.jpg "ToDo")
+
+##### Editar To-Do
+![Edit ToDo](https://github.com/tomas1646/Implementation-Exercise-ToDo-List/blob/master/img%20README/EditingTodo.jpg "Edit ToDo")
+
 ### Technologies
 
 #### Front-End
