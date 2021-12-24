@@ -35,7 +35,13 @@ Crear el usuario y la contraseña se puede encontrar facilmente en internet.
 
 `cd Implementation-Exercise-ToDo-List/`
 
-4. y para configurar el proyecto ejecutamos:
+4. y para configurar el proyecto tenemos que ejecutar bash.sh. Pero para poder ejecutarlo debemos darle permiso para que se pueda correr. 
+
+5. Para darle permiso ejecutamos:
+
+`chmod +x bash.sh`
+
+6. Y luego corremos el Script:
 
 `./bash.sh`
 
