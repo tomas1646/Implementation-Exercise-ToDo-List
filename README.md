@@ -45,7 +45,7 @@ referencia: https://stackoverflow.com/questions/41645309/mysql-error-access-deni
 
 `cd Implementation-Exercise-ToDo-List/`
 
-4. y para configurar el proyecto tenemos que ejecutar bash.sh. Pero para poder ejecutarlo debemos darle permiso para que se pueda correr. 
+4. Luego, para configurar el proyecto tenemos que ejecutar bash.sh. Pero para poder ejecutarlo debemos darle permiso para que se pueda correr. 
 
 5. Para darle permiso ejecutamos:
 
@@ -60,7 +60,7 @@ Lo que hace este Script es:
 * Instala Maven en el proyecto
 * Ejecuta el .war para que corra la aplicacion en el puerto 8080
 
-La aplicacion corre en el puerto numero 8080. La podemos abrir de nuestro navegador de preferencia.
+La aplicación corre en el puerto numero 8080. La podemos abrir de nuestro navegador de preferencia.
 
 `http://localhost:8080/`
 
