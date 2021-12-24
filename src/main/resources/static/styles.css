@@ -1,0 +1,19 @@
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.ancho{
+    max-width: 600px;
+    padding-top: 50px;
+}
+
+
+p{
+	margin-bottom: 0;
+	float: right;
+	color: blue;
+}
+
+.cursor{
+	cursor: pointer;
+}
