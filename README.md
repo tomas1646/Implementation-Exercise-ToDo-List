@@ -100,4 +100,4 @@ Para la comunicacion entre el Front-End y el Back-End se hace a traves de un ser
 
 #### Requerimientos Extra
 
-* Diseño Responsive de la aplicacion
+* Diseño Responsive de la aplicación
